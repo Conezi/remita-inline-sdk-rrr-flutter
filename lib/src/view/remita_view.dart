@@ -119,7 +119,6 @@ class _RemitaInLineViewState extends State<RemitaInLineView> {
       },
       onConsoleMessage:
           (InAppWebViewController controller, ConsoleMessage consoleMessage) {
-        _webViewController?.stopLoading();
         widget._streamController.sink.add(consoleMessage);
         onPopScreen(context, consoleMessage);
       },
